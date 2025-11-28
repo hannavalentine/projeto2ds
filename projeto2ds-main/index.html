@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio - Rei dos Piratas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="logo">
+                <span class="skull">☠</span>
+                <span class="logo-text">Mugiwara Crew</span>
+            </div>
+            <button class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#hero" class="nav-link">Início</a></li>
+                <li><a href="#about" class="nav-link">Sobre</a></li>
+                <li><a href="#skills" class="nav-link">Habilidades</a></li>
+                <li><a href="#contact" class="nav-link">Contato</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <section id="hero" class="hero">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="title-line">Eu Vou Ser o</span>
+                    <span class="title-main">Rei dos Desenvolvedores!</span>
+                </h1>
+                <p class="hero-subtitle">
+                    Desenvolvedor Full Stack em busca do One Piece do código perfeito
+                </p>
+                <div class="hero-buttons">
+                    <a href="#contact" class="btn btn-secondary">Entrar em Contato</a>
+                </div>
+            </div>
+
+            <div class="hero-image">
+                <div class="straw-hat">
+                    <div class="hat-top"></div>
+                    <div class="hat-band"></div>
+                    <div class="hat-brim"></div>
+                </div>
+            </div>
+        </div>
+
+        <div class="waves">
+            <svg viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M0,50 Q300,100 600,50 T1200,50 L1200,120 L0,120 Z" fill="currentColor"></path>
+            </svg>
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre Mim</h2>
+
+            <div class="about-content">
+                <div class="about-text">
+                    <p class="about-intro">
+                        Assim como Luffy busca o One Piece, eu busco criar experiências digitais incríveis!
+                    </p>
+                    <p>Sou um desenvolvedor apaixonado por tecnologia e inovação. Com anos navegando pelos mares do desenvolvimento web, domino diversas tecnologias.</p>
+                    <p>Cada projeto é uma aventura e estou sempre pronto para enfrentar novos desafios!</p>
+
+                    <div class="bounty-poster">
+                        <div class="bounty-header">WANTED</div>
+                        <div class="bounty-amount">฿ 1.000.000.000</div>
+                        <div class="bounty-name">MARIA JULIA</div>
+                        <div class="bounty-footer">DEAD OR ALIVE</div>
+                    </div>
+                </div>
+
+                <!-- foto sobre mim liberada -->
+                <div class="about-image">
+                    <img src="assets/WhatsApp Image 2025-11-26 at 10.01.28.jpeg" alt="Foto de Perfil">
+                    <div class="placeholder-icon">
+                        <span>👤</span>
+                        <p>Adicione sua foto em<br>assets/profile.jpg</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">Habilidades da Tripulação</h2>
+            <p class="section-subtitle">Cada membro tem sua especialidade</p>
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <div class="skill-icon">⚔️</div>
+                    <h3>Front-End</h3>
+                    <ul>
+                        <li>HTML5 & CSS3</li>
+                        <li>JavaScript</li>
+                        <li>React / Vue</li>
+                        <li>Tailwind</li>
+                        <li>Responsividade</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🗡️</div>
+                    <h3>Back-End</h3>
+                    <ul>
+                        <li>Node.js / Express</li>
+                        <li>Django / Python</li>
+                        <li>APIs REST</li>
+                        <li>GraphQL</li>
+                        <li>Microservices</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">🏴‍☠️</div>
+                    <h3>Databases</h3>
+                    <ul>
+                        <li>MongoDB</li>
+                        <li>PostgreSQL</li>
+                        <li>MySQL</li>
+                        <li>Redis</li>
+                        <li>Firebase</li>
+                    </ul>
+                </div>
+
+                <div class="skill-category">
+                    <div class="skill-icon">⚓</div>
+                    <h3>DevOps</h3>
+                    <ul>
+                        <li>Docker</li>
+                        <li>Git & GitHub</li>
+                        <li>CI/CD</li>
+                        <li>AWS / Azure</li>
+                        <li>Linux</li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Entre em Contato</h2>
+            <p class="section-subtitle">Vamos navegar juntos nessa aventura!</p>
+            
+            <div class="contact-content">
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nome</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary">Enviar Mensagem</button>
+                </form>
+
+                <div class="contact-info">
+                    <div class="info-card">
+                        <div class="info-icon">📧</div>
+                        <h3>Email</h3>
+                        <p>hannavalentine291@gmail.com</p>
+                    </div>
+                    
+                    
+                    <div class="info-card">
+                        <div class="info-icon">🐙</div>
+                        <h3>GitHub</h3>
+                        <p>github.com/hannavalentine</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="skull">☠</span>
+                    <span>Mugiwara Crew</span>
+                </div>
+                <p class="footer-text">© 2025 - Todos os direitos reservados. Feito com ❤️</p>
+                <div class="social-links">
+                    <a href="#" class="social-link" aria-label="GitHub">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                    </a>
+                    
+                    <a href="#" class="social-link" aria-label="Twitter">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
