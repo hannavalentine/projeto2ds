@@ -84,7 +84,7 @@ const projectCards = document.querySelectorAll('.project-card');
 projectCards.forEach((card, index) => {
     card.style.opacity = '0';
     card.style.transform = 'translateY(30px)';
-    card.style.transition = opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s;
+    card.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
     observer.observe(card);
 });
 
@@ -93,7 +93,7 @@ const skillCategories = document.querySelectorAll('.skill-category');
 skillCategories.forEach((category, index) => {
     category.style.opacity = '0';
     category.style.transform = 'translateY(30px)';
-    category.style.transition = opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s;
+    category.style.transition = `opacity 0.6s ease ${index * 0.1}s, transform 0.6s ease ${index * 0.1}s`;
     observer.observe(category);
 });
 
@@ -104,26 +104,22 @@ contactForm.addEventListener('submit', (e) => {
     
     const name = document.getElementById('name').value;
     const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
+
+    alert(`Obrigado pela mensagem, ${name}! Entrarei em contato em breve através do email ${email}.`);
     
-    // Here you would typically send the form data to a server
-    // For now, we'll just show an alert
-    alert(Obrigado pela mensagem, ${name}! Entrarei em contato em breve através do email ${email}.);
-    
-    // Reset form
     contactForm.reset();
 });
 
-// Add parallax effect to hero section
+// Parallax effect on hero section
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const heroContent = document.querySelector('.hero-content');
     if (heroContent) {
-        heroContent.style.transform = translateY(${scrolled * 0.5}px);
+        heroContent.style.transform = `translateY(${scrolled * 0.5}px)`;
     }
 });
 
-// Add typing effect to hero title (optional enhancement)
+// Typing effect
 const heroTitle = document.querySelector('.title-main');
 if (heroTitle) {
     const text = heroTitle.textContent;
@@ -137,55 +133,22 @@ if (heroTitle) {
             setTimeout(typeWriter, 100);
         }
     };
-    
-    // Start typing effect after page load
+
     setTimeout(typeWriter, 500);
 }
 
-// Add wave animation
+// Wave animation
 const createWave = () => {
     const waves = document.querySelector('.waves path');
     if (waves) {
         let offset = 0;
         setInterval(() => {
             offset += 0.5;
-            waves.setAttribute('d', M0,50 Q${300 + Math.sin(offset * 0.01) * 50},${100 + Math.sin(offset * 0.02) * 20} 600,50 T1200,50 L1200,120 L0,120 Z);
+            waves.setAttribute('d', `M0,50 Q${300 + Math.sin(offset * 0.01) * 50},${100 + Math.sin(offset * 0.02) * 20} 600,50 T1200,50 L1200,120 L0,120 Z`);
         }, 50);
     }
 };
-
 createWave();
-
-// Add cursor trail effect (optional)
-const createCursorTrail = () => {
-    let mouseX = 0;
-    let mouseY = 0;
-    
-    document.addEventListener('mousemove', (e) => {
-        mouseX = e.clientX;
-        mouseY = e.clientY;
-    });
-    
-    const trail = document.createElement('div');
-    trail.style.position = 'fixed';
-    trail.style.width = '10px';
-    trail.style.height = '10px';
-    trail.style.borderRadius = '50%';
-    trail.style.backgroundColor = 'var(--straw-yellow)';
-    trail.style.pointerEvents = 'none';
-    trail.style.opacity = '0.5';
-    trail.style.transition = 'all 0.1s ease';
-    trail.style.zIndex = '9999';
-    document.body.appendChild(trail);
-    
-    setInterval(() => {
-        trail.style.left = mouseX + 'px';
-        trail.style.top = mouseY + 'px';
-    }, 100);
-};
-
-// Uncomment to enable cursor trail
-// createCursorTrail();
 
 console.log('🏴‍☠️ Bem-vindo ao Portfólio One Piece! 🏴‍☠️');
 console.log('Vamos navegar juntos pela Grand Line do desenvolvimento!');
